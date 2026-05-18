@@ -1,0 +1,160 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(to right, #141e30, #243b55);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* ===== Calculator Container ===== */
+.container {
+  width: 100%;
+  max-width: 420px;
+  background-color: white;
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* ===== Display ===== */
+.display {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+#screen {
+  width: 100%;
+  height: 70px;
+  border: none;
+  outline: none;
+  border-radius: 12px;
+  background-color: #f1f1f1;
+  padding: 15px;
+  font-size: 24px;
+  text-align: right;
+  color: #222;
+}
+
+/* ===== Buttons Area ===== */
+.btns {
+  width: 100%;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+/* ===== Buttons ===== */
+.btn,
+.bt {
+  width: 100%;
+  height: 60px;
+  border: none;
+  border-radius: 12px;
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  background-color: #e4e4e4;
+}
+
+.btn:hover,
+.bt:hover {
+  transform: scale(1.05);
+  background-color: #d1d1d1;
+}
+
+/* Clear Button */
+.bt {
+  width: 100%;
+  background-color: crimson;
+  color: white;
+  margin-bottom: 12px;
+}
+
+.bt:hover {
+  background-color: darkred;
+}
+
+/* Equal Button */
+.btn[style] {
+  color: white;
+}
+
+/* ===== Tablet Responsive ===== */
+@media (max-width: 768px) {
+  .container {
+    max-width: 100%;
+    padding: 20px;
+  }
+
+  #screen {
+    height: 65px;
+    font-size: 22px;
+  }
+
+  .btn,
+  .bt {
+    height: 55px;
+    font-size: 20px;
+  }
+
+  .row {
+    gap: 10px;
+  }
+}
+
+/* ===== Mobile Responsive ===== */
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+
+  .container {
+    padding: 15px;
+    border-radius: 15px;
+  }
+
+  #screen {
+    height: 60px;
+    font-size: 18px;
+    padding: 10px;
+  }
+
+  .row {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+
+  .btn,
+  .bt {
+    height: 50px;
+    font-size: 18px;
+    border-radius: 10px;
+  }
+}
+
+/* ===== Extra Small Devices ===== */
+@media (max-width: 320px) {
+  #screen {
+    font-size: 16px;
+  }
+
+  .btn,
+  .bt {
+    height: 45px;
+    font-size: 16px;
+  }
+}
